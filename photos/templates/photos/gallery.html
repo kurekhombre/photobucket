@@ -18,13 +18,9 @@
                     Categories
                   </div>
                   <ul class="list-group list-group-flush">
-                      <li class="list-group-item">
-                          <a href="{% url 'gallery' %}">All</a>
-                      </li>
+                          <a class="btn btn-light btn-block btn-sm m-1" style="text-decoration: inherit; color: inherit; cursor: auto" href="{% url 'gallery' %}">All</a>
                       {% for category in categories %}
-                    <li class="list-group-item">
-                        <a href="{% url 'gallery' %}?category={{category.name}}">{{category.name}}</a>
-                    </li>
+                        <a class="btn btn-light btn-block btn-sm m-1" style="text-decoration: inherit; color: black; cursor: auto" href="{% url 'gallery' %}?category={{category.name}}">{{category.name}}</a>
                       {% endfor %}
 
                       <a href="{% url 'add-photo' %}" class="btn btn-dark btn-block btn-sm m-1">Add Photo</a>
@@ -39,6 +35,7 @@
                         <div class="card my-2">
                           <img src="{{photo.image.url}}" class="img-thumbnail" alt="...">
                           <div class="card-body">
+                              <p>{{photo.description|truncatewords:5}}</p>
                               <small>Category: {{photo.category}}</small>
                           </div>
                             <a href="{% url 'view-photo' photo.pk %}" class="btn btn-outline-dark btn-sm m-1">View</a>
