@@ -1,6 +1,6 @@
 # Image Gallery build with Django
 
-
+# Demo
 ![Alt text](/photobucket_ss.png?raw=true "/photobucket")
 
 
