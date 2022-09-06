@@ -4,7 +4,7 @@
 ![Alt text](/photobucket_ss.png?raw=true "/photobucket")
 
 
-Photo Album based on categories
+Photo Album sorted by categories
 
 ## Setup
 
